@@ -1,20 +1,19 @@
 package com.isc517.practica3.isc517practica3.Models;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-
 import javax.persistence.*;
 
 @Entity
-@EnableAutoConfiguration
+@Table(name = "forms")
 public class Form {
+
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(updatable = false, nullable = false)
     private Long id;
     private Integer questionOne;
     private Integer questionTwo;
     private Integer questionThree;
-    private String  questionFour;
-
+    private String questionFour;
 
     public Form() {
 
@@ -55,8 +54,8 @@ public class Form {
         return questionThree;
     }
 
-    public void setQuestionThree(Integer questionThree) { 
-        this.questionThree = questionThree; 
+    public void setQuestionThree(Integer questionThree) {
+        this.questionThree = questionThree;
     }
 
     public String getQuestionFour() {

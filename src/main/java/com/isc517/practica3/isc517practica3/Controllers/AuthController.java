@@ -11,7 +11,7 @@ public class AuthController {
 
     @GetMapping("/login")
     public String login(Model model) {
-        
-        return "/login";
+
+        return "/auth_login";
     }
 }

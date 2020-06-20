@@ -6,12 +6,15 @@ import java.lang.String;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "roles")
 public class Role {
-    
+
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
+    @Column(nullable = false, unique = true)
     String name;
 
     public Role() {
