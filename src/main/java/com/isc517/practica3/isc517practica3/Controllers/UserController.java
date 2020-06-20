@@ -26,12 +26,11 @@ public class UserController {
 
     @GetMapping(path = "/form")
     public String index(Model model) {
-        model.addAttribute("title", "Barcamp Form");
         return "/form";
     }
 
-    @GetMapping(path ="/saveform")
-    public String guardarform (@RequestParam("questionOne") int questionOne, @RequestParam("questionTwo") int questionTwo, @RequestParam("questionThree") int questionThree, @RequestParam("questionFour") String questionFour) {
+    @PostMapping(path ="/saveform")
+    public String saveForm (@RequestParam("questionOne") int questionOne, @RequestParam("questionTwo") int questionTwo, @RequestParam("questionThree") int questionThree, @RequestParam("questionFour") String questionFour) {
 
         Form form = new Form();
         form.setQuestionOne(questionOne);
