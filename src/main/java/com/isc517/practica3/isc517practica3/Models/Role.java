@@ -1,11 +1,9 @@
 package com.isc517.practica3.isc517practica3.Models;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.io.Serializable;
-
 import java.lang.String;
 import javax.persistence.*;
 
@@ -19,8 +17,9 @@ public class Role implements Serializable {
 
     String name;
 
-    public Role(){
+    public Role() {
     }
+
     public Role(String name) {
         this.name = name;
     }

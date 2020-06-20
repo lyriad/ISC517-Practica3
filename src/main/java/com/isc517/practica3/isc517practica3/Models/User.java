@@ -9,6 +9,7 @@ import java.util.Set;
 @Entity
 @EnableAutoConfiguration
 public class User implements Serializable {
+
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
@@ -16,10 +17,22 @@ public class User implements Serializable {
     private String password;
     private boolean active;
     private String username;
-    //relación
+
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private
-    Set<Role> roles;
+    private Set<Role> roles;
+
+
+    public User() {
+
+    }
+
+    public User(String name, String password, boolean active, String username, Set<Role> roles) {
+        this.name = name;
+        this.password = password;
+        this.active = active;
+        this.username = username;
+        this.roles = roles;
+    }
 
     public Integer getId() {
         return id;
@@ -68,6 +81,4 @@ public class User implements Serializable {
     public void setUsername(String username) {
         this.username = username;
     }
-
-
 }
