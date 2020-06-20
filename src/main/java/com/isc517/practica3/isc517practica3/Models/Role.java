@@ -1,15 +1,12 @@
 package com.isc517.practica3.isc517practica3.Models;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.io.Serializable;
 import java.lang.String;
 import javax.persistence.*;
 
 @Entity
-@EnableAutoConfiguration
-public class Role implements Serializable {
+public class Role {
     
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
