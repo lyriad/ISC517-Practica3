@@ -39,10 +39,7 @@ public class AuthController {
                 return "redirect:/login";
             }
         }
-        for (Iterator<Role> it = user.getRoles().iterator(); it.hasNext(); ) {
-            Role r = it.next();
-            if (r.equals(new Role("USER"))) return "thymeleaf/index";
-        }
-        return "thymeleaf/users";
+
+        return "redirect:/form";
     }
 }
