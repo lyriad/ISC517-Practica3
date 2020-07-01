@@ -7,7 +7,7 @@
 		<title>Login</title>
 		<link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 		<link href="/vendor/Nunito/all.css" rel="stylesheet" type="text/css">
-		<link href="/css/sb-admin-2.min.css" rel="stylesheet">
+		<link href="/css/sb-admin-2.min.css" rel="stylesheet" type="text/css">
 	</head>
 
 	<body class="bg-gradient-primary">
@@ -23,9 +23,9 @@
 										<div class="text-center">
 											<h1 class="h4 text-gray-900 mb-4">Welcome!</h1>
 										</div>
-										<form method="POST" action="/auth/login">
+										<form method="POST" action="/login">
 											<div class="form-group">
-												<input type="text" class="form-control form-control-user" name="usermane" id="loginEmail" placeholder="Username">
+												<input type="text" class="form-control form-control-user" name="username" id="loginEmail" placeholder="Username">
 											</div>
 											<div class="form-group">
 												<input type="password" class="form-control form-control-user" name="password" id="loginPassword" placeholder="Password">
